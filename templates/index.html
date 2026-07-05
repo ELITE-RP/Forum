@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Жалобы</h2>
+{% if session.username %}
+<form action="/create_complaint" method="POST">
+    <input type="text" name="title" placeholder="Заголовок" required><br>
+    <textarea name="content" placeholder="Описание" required></textarea><br>
+    <button type="submit">Создать жалобу</button>
+</form>
+{% endif %}
+
+{% for c in complaints %}
+<div class="complaint">
+    <h3>{{ c.title }} (Статус: {{ c.status }})</h3>
+    <p>{{ c.content }} — Автор: {{ c.author }}</p>
+    {% if session.username == 'Shadow' %}
+        <a href="/update_status/{{c.id}}/Принято">Принять</a> | 
+        <a href="/update_status/{{c.id}}/Отказано">Отказать</a> | 
+        <a href="/update_status/{{c.id}}/Закрыто">Закрыть</a>
+    {% endif %}
+</div>
+{% endfor %}
+{% endblock %}
