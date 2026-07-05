@@ -1,0 +1,29 @@
+body {
+    background-color: #0b0813;
+    color: #f5f2fa;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0; padding: 0;
+}
+header {
+    background: linear-gradient(180deg, #160f24 0%, #0b0813 100%);
+    border-bottom: 3px solid #9d4edd;
+    padding: 30px 20px; text-align: center;
+}
+.header-container { text-align: center; }
+.forum-logo { max-height: 120px; display: block; margin: 0 auto 12px auto; border-radius: 50%; box-shadow: 0 0 20px rgba(157, 78, 221, 0.4); }
+.logo-text { font-size: 34px; font-weight: 900; color: #ffffff; text-transform: uppercase; letter-spacing: 3px; }
+.logo-text span { color: #9d4edd; }
+.container { max-width: 1140px; margin: 30px auto; padding: 0 15px; }
+.forum-category { background-color: #130f21; border-radius: 8px; border: 1px solid #2a2040; margin-bottom: 25px; overflow: hidden; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6); }
+.category-header { background: linear-gradient(90deg, #21163b 0%, #1a1030 100%); color: #ffffff; padding: 14px 20px; font-weight: bold; font-size: 16px; border-bottom: 1px solid #35255c; text-transform: uppercase; }
+.board-row { padding: 18px 20px; border-bottom: 1px solid #1c1530; display: flex; justify-content: space-between; align-items: center; }
+.board-row:hover { background-color: #1a142e; }
+.board-info a { color: #e0aaff; text-decoration: none; font-size: 17px; font-weight: 600; }
+.board-info a:hover { text-decoration: underline; color: #ffffff; }
+.board-desc { color: #a5a1b8; font-size: 13.5px; margin-top: 6px; }
+.btn { background-color: #7b2cbf; color: white; padding: 10px 20px; border: none; border-radius: 5px; text-decoration: none; font-weight: bold; cursor: pointer; display: inline-block; }
+.btn:hover { background-color: #9d4edd; }
+.post-card { background-color: #130f21; border: 1px solid #2a2040; border-radius: 8px; padding: 20px; margin-bottom: 15px; }
+.form-group { margin-bottom: 15px; }
+.form-group label { display: block; margin-bottom: 6px; font-weight: bold; color: #e0aaff; }
+.form-control { width: 100%; padding: 12px; background-color: #19132b; border: 1px solid #35255c; color: white; border-radius: 5px; box-sizing: border-box; }
