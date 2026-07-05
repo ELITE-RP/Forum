@@ -1,8 +1,0 @@
-<!DOCTYPE html><html><head>
-    <style>body{background:#121212; color:#e0e0e0; font-family:sans-serif;} 
-    nav{padding:20px; border-bottom:1px solid #333; display:flex; align-items:center; justify-content:space-between;}
-    .container{max-width:800px; margin:auto; padding:20px;}
-    a{color: #00bcd4; text-decoration:none; margin-right:10px;}</style></head><body>
-    <nav><div><img src="{{url_for('static', filename='logo.png')}}" style="width:40px; vertical-align:middle;"> <b>Shadow Forum</b></div>
-    <div>{% if session.user_id %}<a href="{{url_for('logout')}}">Выход</a>{% else %}<a href="{{url_for('login')}}">Вход</a>{% endif %}</div></nav>
-    <div class="container">{% block content %}{% endblock %}</div></body></html>
