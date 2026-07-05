@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ELITE RP Форум</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="ELITE RP Logo" class="forum-logo">
+            <div class="logo-text">ELITE <span>RP</span></div>
+        </div>
+    </header>
+    <div class="container">
+        <p><a href="/" style="color: #c77dff; text-decoration: none; font-weight: bold;">🏠 Главная страница</a></p>
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

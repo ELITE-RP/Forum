@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h2>{{ thread.title }}</h2>
+    {% for post in thread.posts %}
+    <div class="post-card" style="padding: 20px;">
+        <div style="font-weight: bold; color: #9d4edd; margin-bottom: 5px;">{{ post.author }}</div>
+        <div style="white-space: pre-line;">{{ post.text }}</div>
+    </div>
+    {% endfor %}
+    <div class="forum-category" style="padding: 20px; margin-top: 30px;">
+        <h3 style="color: #e0aaff;">Оставить ответ</h3>
+        <form method="POST">
+            <input type="text" name="author" class="form-control" placeholder="Никнейм" required style="margin-bottom:10px;">
+            <textarea name="text" rows="5" class="form-control" placeholder="Сообщение" required style="margin-bottom:10px;"></textarea>
+            <button type="submit" class="btn">Отправить</button>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h2>Создание темы</h2>
+    <div class="forum-category" style="padding: 20px;">
+        <form method="POST">
+            <input type="text" name="title" class="form-control" placeholder="Название" required style="margin-bottom:10px;">
+            <input type="text" name="author" class="form-control" placeholder="Никнейм" required style="margin-bottom:10px;">
+            <textarea name="text" rows="8" class="form-control" placeholder="Текст" required style="margin-bottom:10px;"></textarea>
+            <button type="submit" class="btn">Создать</button>
+        </form>
+    </div>
+{% endblock %}
